@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print(f"CLIENT - connected to server at port {PORT} and host {HOST}")
 
         while True:
-            msg = input("CLIENT - Send a message: ")    #receive message
+            msg = input("CLIENT - Send a message: (/END to finish)")    #receive message
             if (msg == '/END'): #stop message
                 break
             clientSocket.send(bytes(msg, 'utf8'))   #send message to server
